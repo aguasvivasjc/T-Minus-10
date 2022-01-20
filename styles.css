@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+:root {
+    background-color: #13293d;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: rgb(231, 196, 143);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 30px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 10px 0;
+    padding: 5px;
+    gap: 10px;
+}
+
+.control{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    /* margin: 10px; */
+    gap: 10px;
+}
+
+.start-button {
+    background-color: rgb(60, 206, 60);
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* #submit-btn {
+    background-color: rgb(68, 191, 196);
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+} */
+
+#reset-btn {
+    background-color: rgb(202, 18, 18);
+    font-size: small;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.btn {
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cornsilk
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+    /* background-color: cornflowerblue; */
+/* }
+
+.options {
+    display: inline-block;
+    align-items: column;
+    padding: 5px;
+}
+
+.button {
+background: darkgray;
+border: 1 px solid;
+border-radius: 5px 10px;
+color: black;
+outline: none;
+
+}
+
+.btn:hover {
+    border-color: black;
+}
+ /* 

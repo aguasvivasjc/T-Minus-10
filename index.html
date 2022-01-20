@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quiz Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="question-container">
+            <!-- Question to be displayed here -->
+            <div id="question">Let's play a game...</div>
+            <!-- Answer grid, A,B,C,D -->
+            <div id="answer-btn" class="btn-grid">
+                <button id="answerA" data-letter="a">A</button>
+                <button id="answerB" data-letter="b">B</button>
+                <button id="answerC" data-letter="c">C</button>
+                <button id="answerD" data-letter="d">D</button>
+            </div>
+        </div>
+        <!-- Game control buttons for starting, submitting answer & restarting game -->
+        <div class="control">
+            <button id="start-btn" class="start-button">Start Game</button>
+            <!-- <button id="submit-btn" class="submit-button">Submit Answer</button> -->
+            <button id="reset-btn" class="reset-button">Reset Game</button>
+
+        </div>
+
+
+        <!-- Timer & Score -->
+        <section>
+            <h3 id="timer">
+                <h3>
+                    <!-- <div id="Wins">Wins:</div>
+            <div id="Loses">Loses:</div> -->
+                    <div id="Highscore">Highscore:</div>
+
+        </section>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
