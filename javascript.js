@@ -1,4 +1,5 @@
 var startButton = document.getElementById('start-btn')
+// var saveScorebBtn = document.getElementById('saveScoreBtn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonElement = document.getElementById('answer-btn')
@@ -7,10 +8,18 @@ var answerB_El = document.getElementById("answerB")
 var answerC_El = document.getElementById("answerC")
 var answerD_El = document.getElementById("answerD")
 var timerElement = document.querySelector('#timer')
+// var username = document.getElementById('username')
+// var scoreDisplay = document.getElementById('scoreDisplay')
+// var username = document.getElementById("username")
+// var saveScoreBtn = document.getElementById("saveScorebBtn")
+// var highScore = JSON.parse(localStorage.getItem("scoreDisplay"));
+// console.log(highScore)
 var currentQuestion;
 var highscoreElement = document.getElementById('Highscore')
 var time = 50
 var timer; 
+var score = 0
+
 // var endGame = document.querySelector(".reset-button")
 var resetButton = document.getElementById('reset-btn')
 
@@ -30,8 +39,7 @@ function startGame() {
     startTimer()
     startButton.classList.add('hide')
     questionContainerElement.classList.remove('hide')
-
-
+    resetButton.classList.add('hide')
 }
 
 
@@ -49,6 +57,7 @@ function showQuestion() {
    answerB_El.innerText = currentQuestion.b
    answerC_El.innerText = currentQuestion.c
    answerD_El.innerText = currentQuestion.d
+   scoreDisplay.innerText = score;
 
 //    answerA_El.setAttribute('value', currentQuestion.a) 
 //    answerB_El.setAttribute('value', currentQuestion.b)
@@ -59,14 +68,16 @@ function showQuestion() {
    answerB_El.addEventListener('click' , pickAnswer )
    answerC_El.addEventListener('click' , pickAnswer )
    answerD_El.addEventListener('click' , pickAnswer )
+   
 }
 
 function pickAnswer() {
     console.log(this.getAttribute("data-letter"))
     console.log(currentQuestion.correctAnswer)
+    
     if(this.getAttribute("data-letter") === currentQuestion.correctAnswer) {
       
-      
+        score++;
         time +=1;
         if(time <= 0 ) {
         }
@@ -88,13 +99,14 @@ function pickAnswer() {
        showQuestion()
    }
 }
-// DOESN'T WORK 
+
 function endGame() {
     clearInterval(timer)
-    startButton.classList.remove('hide')
+    // startButton.classList.add('hide')
     questionContainerElement.classList.add('hide')
     highscoreElement.classList.remove('hide')
     timerElement.classList.add('hide')
+    resetButton.classList.add('hide')
 
 }
 resetButton.addEventListener("click", startGame)
@@ -103,31 +115,31 @@ resetButton.addEventListener("click", startGame)
 // Questions array 
 var questions = [
     {
-        question: "what is the definition of HTML?",
+        question: "Where should you place the semicolon after a statement?",
 
         // answers: ["a", "b", "c"]
-            a: "HyperText Markup Language",
-            b: "Hulu TV Must Love",
-            c: "Styles Sheet",
-            d: "Hungry Tall Monkey List",
+            a: "End of statement",
+            b: "You don't need one",
+            c: "The middle of a statement",
+            d: "Commas are needed",
         correctAnswer: "a", 
     },
 
     {
-        question: "What language is generally used to decorate a webpage?",
+        question: "What language is generally used to give functionality to webpage?",
            a: "HTML", 
-           b: "CSS", 
-           c: "Javascript", 
+           b: "Javascript", 
+           c: "CSS", 
            d: "Python", 
         correctAnswer: "b",
     },
 
     {
-        question: "How can you change directories within a terminal?",
-           a: "mkdir",
-           b: "/..",
-           c: "ls",
-           d: "cd ..",
+        question: "What do arrow functions do?",
+           a: "Nothing",
+           b: "Completes function",
+           c: "They are useless",
+           d: "Declares function",
         correctAnswer: "d",
     },
 
@@ -171,8 +183,12 @@ function startTimer() {
     }, 1000);
   }
 
+// function saveScorebBtn () {
+//     console.log('test')
+// }
+//   saveScoreBtn.addEventListener("click", saveScoreBtn)
 
-
+  
 // var resetButton = document.querySelector(".reset-button")
 
 // function restartGame(){

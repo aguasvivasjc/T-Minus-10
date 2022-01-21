@@ -27,6 +27,7 @@
             <button id="start-btn" class="start-button">Start Game</button>
             <!-- <button id="submit-btn" class="submit-button">Submit Answer</button> -->
             <button id="reset-btn" class="reset-button">Reset Game</button>
+            <!-- <a class="reset" href="/index.html"</a> -->
 
         </div>
 
@@ -37,7 +38,29 @@
                 <h3>
                     <!-- <div id="Wins">Wins:</div>
             <div id="Loses">Loses:</div> -->
-                    <div id="Highscore">Highscore:</div>
+                                   
+
+                    <div id="Highscore" class="hide">Highscore:
+                        <p id="scoreDisplay">0</p> 
+                        <form>
+                            <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Name Here"
+                            />
+                            <button 
+                            type="submit"
+                            class="btn"
+                            id="saveScorebtn"
+                            >
+                            Save
+                            </button>
+                        </form>
+                        <a class="reset" href="/index.html">Play Again?</a>
+
+                    </div>
+                    
 
         </section>
     </div>
